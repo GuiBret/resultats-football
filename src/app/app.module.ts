@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+
 import { RouterModule, Routes } from '@angular/router';
+
+
+import { HttpClientModule } from '@angular/common/http'
+
 
 import { AppComponent } from './app.component';
 import { CountryCompetitionComponent } from './country-competition/country-competition.component';
 import { CompetitionInfoComponent } from './competition-info/competition-info.component';
 import { CompetitionRankingComponent } from './competition-ranking/competition-ranking.component';
 import { CompetitionResultsComponent } from './competition-results/competition-results.component';
+
 
 
 const appRoutes : Routes = [
@@ -18,6 +22,9 @@ const appRoutes : Routes = [
     { path: "competition/:competitionid/results", component: CompetitionResultsComponent }
 ];
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +32,12 @@ const appRoutes : Routes = [
     CompetitionInfoComponent,
     CompetitionRankingComponent,
     CompetitionRankingComponent,
-    CompetitionResultsComponent
+    CompetitionResultsComponent,
+    
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(
         appRoutes, 
         { enableTracing: true}
