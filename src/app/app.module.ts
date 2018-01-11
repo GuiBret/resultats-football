@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CountryCompetitionComponent } from './country-competition/country-competition.component';
 import { CompetitionInfoComponent } from './competition-info/competition-info.component';
 import { CompetitionRankingComponent } from './competition-ranking/competition-ranking.component';
+import { CompetitionResultsComponent } from './competition-results/competition-results.component';
 
 
 const appRoutes : Routes = [
@@ -23,7 +24,8 @@ const appRoutes : Routes = [
     CountryCompetitionComponent,
     CompetitionInfoComponent,
     CompetitionRankingComponent,
-    CompetitionRankingComponent
+    CompetitionRankingComponent,
+    CompetitionResultsComponent
   ],
   imports: [
     BrowserModule,
