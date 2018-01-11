@@ -6,16 +6,24 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CountryCompetitionComponent } from './country-competition/country-competition.component';
+import { CompetitionInfoComponent } from './competition-info/competition-info.component';
+import { CompetitionRankingComponent } from './competition-ranking/competition-ranking.component';
 
 
 const appRoutes : Routes = [
-    { path: "competitions/:countryid", component: CountryCompetitionComponent}
+    { path: "competitions/:countryid", component: CountryCompetitionComponent},
+    { path : "competition/:competitionid", component: CompetitionInfoComponent},
+    { path: "competition/:competitionid/ranking", component: CompetitionRankingComponent},
+    { path: "competition/:competitionid/results", component: CompetitionResultsComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    CountryCompetitionComponent
+    CountryCompetitionComponent,
+    CompetitionInfoComponent,
+    CompetitionRankingComponent,
+    CompetitionRankingComponent
   ],
   imports: [
     BrowserModule,
