@@ -12,15 +12,13 @@ import { HttpClient } from "@angular/common/http";
 
 export class CountryCompetitionComponent implements OnInit {
     
-  results : string[];
-
     
+    results: Object[]
   constructor(private http: HttpClient) { }
 
   ngOnInit() : void {
       
-
-      this.http.get("http://localhost/back-resultats/").subscribe(data => {
+      this.http.get("http://127.0.0.1/back-resultats/").subscribe(data => {
         console.log(data);
       });
   }
