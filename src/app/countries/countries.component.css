@@ -1,0 +1,9 @@
+.btn-country {
+    margin-bottom: 2rem;
+    background-color:lightgray;
+}
+
+.btn-country:hover {
+    background-color:darkgray;
+    transition: background-color 200ms ease-in-out;
+}

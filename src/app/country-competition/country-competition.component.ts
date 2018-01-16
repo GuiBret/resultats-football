@@ -18,7 +18,7 @@ export class CountryCompetitionComponent implements OnInit {
 
   ngOnInit() : void {
       
-      this.http.get("http://127.0.0.1/back-resultats/").subscribe(data => {
+      this.http.get("http://vps496160.ovh.net/back-resultats/countries/").subscribe(data => {
         console.log(data);
       });
   }

@@ -1,0 +1,6 @@
+<div class="container-fluid">
+    <div class="d-flex flex-column col-12 col-md-6 offset-md-3">
+        <span *ngFor="let country of this.countries" routerLink="/competitions/{{country.id}}" class="btn btn-country">{{country.name}}</span>
+    </div>
+    
+</div>

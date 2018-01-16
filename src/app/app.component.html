@@ -1,9 +1,11 @@
-<h1>
-  Mon titre
+<h1 class="text-center">
+    {{title}}
 </h1>
-<nav>
+<nav class="col-12 col-md-6 offset-md-3 text-center d-flex flex-column flex-md-row justify-content-around">
     <a routerLink="/">Accueil</a>
-    <a routerLink="/competitions/3">Lien competition</a>
+    <a routerLink="/competitions">Toutes les compétitions</a>
+    <a routerLink="/countries">Compétitions par pays</a>
 
 </nav>
+
 <router-outlet></router-outlet>

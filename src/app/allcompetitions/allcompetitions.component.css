@@ -1,0 +1,58 @@
+.btn-competition {
+    margin-bottom: 2rem;
+    background-color:lightgray;
+    border-color:gray;
+    font-weight:bold;
+}
+
+
+#container-competitions {
+    max-height:60vh;
+    overflow-y:scroll;
+}
+
+
+/* Boutons pays */
+.btn-brazil {
+    background-color:yellow;
+    color:green;
+}
+
+.btn-england {
+    background-color:white;
+    color:red;
+}
+
+.btn-netherlands {
+    background-color:orange;
+    color:white;
+}
+
+.btn-spain {
+    background-color:#fdc200;
+    color: #c50b1e;
+}
+
+.btn-france {
+    background-color:blue;
+    color:white;
+}
+
+.btn-europe {
+    background-color:blue;
+    color:yellow;
+}
+.btn-australia {
+    background-color:darkblue;
+    color:white;
+}
+
+.btn-germany {
+    background-color:white;
+    color:black;
+}
+
+.btn-italy {
+    background-color:green;
+    color:white;
+}
