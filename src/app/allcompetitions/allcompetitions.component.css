@@ -1,3 +1,22 @@
+@font-face {
+    src:url("/assets/fonts/LigueFrance.ttf");
+    font-family:"Ligue1";
+}
+
+@font-face {
+    src:url("/assets/fonts/PL.ttf");
+    font-family:"PremierLeague";
+}
+
+@font-face {
+    src:url("/assets/fonts/SerieA.otf");
+    font-family:"SerieA";
+}
+
+.btn {
+    font-size:1.3rem;
+}
+
 .btn-competition {
     margin-bottom: 2rem;
     background-color:lightgray;
@@ -7,7 +26,7 @@
 
 
 #container-competitions {
-    max-height:60vh;
+    max-height:80vh;
     overflow-y:scroll;
 }
 
@@ -21,6 +40,8 @@
 .btn-england {
     background-color:white;
     color:red;
+    
+    font-family:"PremierLeague";
 }
 
 .btn-netherlands {
@@ -36,6 +57,9 @@
 .btn-france {
     background-color:blue;
     color:white;
+    font-family:"Ligue1";
+    letter-spacing:1px;
+    
 }
 
 .btn-europe {
@@ -55,4 +79,12 @@
 .btn-italy {
     background-color:green;
     color:white;
+    
+    font-family:"SerieA";
+}
+
+@media screen and (max-device-width:641px) {
+    .btn {
+        font-size:1rem;
+    }
 }
