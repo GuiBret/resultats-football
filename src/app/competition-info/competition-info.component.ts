@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Title } from "@angular/platform-browser";
+import { ActivatedRoute, ParamMap } from '@angular/router';
+
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-competition-info',
@@ -7,9 +12,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetitionInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http : HttpClient, private route : ActivatedRoute) { }
 
+    competition: Object
   ngOnInit() {
+      
+      console.log("Début");
+      
+      this.route.params.subscribe((params : ParamMap) => {
+          
+            this.competition_id = params["idcompetition"]
+
+            this.http.get(`http://localhost/back-resultats/competitions/${params["competitionid"]}`).subscribe((data) => {
+          
+                this.competition = data;
+                this.isDataLoaded = true;
+            });
+          
+      });
+      
+      
+      
+      
   }
 
 }

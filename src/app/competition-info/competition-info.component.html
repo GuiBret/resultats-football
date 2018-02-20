@@ -1,3 +1,7 @@
-<p>
-  competition-info works!
-</p>
+<div class='container-fluid' *ngIf="competition">
+    <h1>{{competition.caption}}</h1>
+    <button type='button' class="btn" id="btn-rankings">Classements</button>
+    <button type='button' class="btn" id="btn-results">Résultats</button>
+    <button type='button' class="btn" id="btn-teams">Résultats</button>
+
+</div>

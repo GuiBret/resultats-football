@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-allcompetitions',
@@ -8,14 +9,14 @@ import { HttpClient } from "@angular/common/http";
 })
 export class AllcompetitionsComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private titleService : Title) { }
+    
 
     
     competitions: Object
   ngOnInit() {
-      console.log("Coucou");
-      this.http.get("http://vps496160.ovh.net/back-resultats/competitions/").subscribe((data) => {
-          console.log(data);
+      this.titleService.setTitle("Toutes les compétitions");
+      this.http.get("http://localhost/back-resultats/competitions/").subscribe((data) => {
          this.competitions = data;
           
       });
