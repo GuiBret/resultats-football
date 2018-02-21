@@ -1,7 +1,19 @@
 <div class='container-fluid' *ngIf="competition">
-    <h1>{{competition.caption}}</h1>
-    <button type='button' class="btn" id="btn-rankings">Classements</button>
-    <button type='button' class="btn" id="btn-results">Résultats</button>
-    <button type='button' class="btn" id="btn-teams">Résultats</button>
-
+    <h2 class="text-center text-{{competition.country_id}}">{{competition.caption}}</h2>
+    <form class="d-flek flex-column mx-auto text-center" id="form-competition-info">
+        <div class="form-group">
+            <button type='button' class="btn btn-primary" id="btn-rankings">Classements</button>
+        </div>
+        <div class="form-group">
+            <button type='button' class="btn btn-primary" id="btn-results">Résultats</button>
+        
+        </div>
+        
+        <div class="form-group">
+            <button type='button' class="btn btn-primary" id="btn-teams">Résultats</button>
+        </div>
+        
+        
+    </form>
+    
 </div>

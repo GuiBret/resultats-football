@@ -1,3 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "dependencies/bootstrap.min.css"
+
+@font-face {
+    src:url("/assets/fonts/LigueFrance.ttf");
+    font-family:"Ligue1";
+}
+
+@font-face {
+    src:url("/assets/fonts/PL.ttf");
+    font-family:"PremierLeague";
+}
+
+@font-face {
+    src:url("/assets/fonts/SerieA.otf");
+    font-family:"SerieA";
+}
+
+.text-italy {
+    font-family:"SerieA";
+}
+
+.text-england {
+    font-family:"PremierLeague" !important;
+}
+
+.text-france {
+    font-family: "Ligue1";
+}
+
+
+@import "dependencies/bootstrap.min.css";
+    

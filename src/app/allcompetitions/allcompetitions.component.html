@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="d-flex flex-column col-12 col-md-6 offset-md-3" id="container-competitions">
-        <span *ngFor="let competition of this.competitions" routerLink="/competition/{{competition.id}}" class="btn btn-competition btn-{{competition.country_id}}">{{competition.caption}}</span>
+        <span *ngFor="let competition of this.competitions" routerLink="/competition/{{competition.id}}" class="btn btn-competition btn-{{competition.country_id}} text-{{competition.country_id}}">{{competition.caption}}</span>
     </div>
 
 </div>
