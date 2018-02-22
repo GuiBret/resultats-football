@@ -22,8 +22,8 @@ export class CompetitionRankingComponent implements OnInit {
 
             this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/rankings`).subscribe((data) => {
                 console.log(data);
-                console.log(data.leagueCaption);
-                this.titleService.setTitle(`${data.leagueCaption} : Classement`);
+                //console.log(data.leagueCaption);
+                //this.titleService.setTitle(`${data.leagueCaption} : Classement`);
                 this.ranking = data;
             });
           
