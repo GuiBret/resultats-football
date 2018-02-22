@@ -1,6 +1,7 @@
 .team-logo {
     width:1.5rem;
     height:1.5rem;
+    object-fit:contain;
 }
 
 table {
@@ -21,6 +22,10 @@ th:last-child {
 
 td {
     white-space:nowrap; /* Forces one-line display */
+}
+
+#page-title {
+    margin-bottom:2rem;
 }
 
 
@@ -47,20 +52,29 @@ td {
     background-color:red;
 }
 
+.text-playoffsdown {
+    background-color: rgb(199, 81, 80);
+    color:white;
+}
+
 .tr-champion {
     background-color:rgba(0,100,0,.8);
     font-weight:bold;
     color:white;
 }
 
-.tr-c1 {
+.tr-c1, .tr-promotion {
     background-color:rgba(0,128,0,.8);
     color:white;
 }
 
-.tr-c3 {
+.tr-c3, .tr-playoffsup {
     background-color:rgba(34,139,34, .8);
     color:white;
+}
+
+.tr-playoffsdown {
+    background-color:rgba(199, 81, 80, .8);
 }
 
 .tr-relegation {
