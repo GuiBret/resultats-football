@@ -7,6 +7,11 @@
 }
 
 @font-face {
+    src:url("/assets/fonts/Champions.ttf");
+    font-family:"ChampionsLeague";
+}
+
+@font-face {
     src:url("/assets/fonts/PL.ttf");
     font-family:"PremierLeague";
 }
@@ -26,6 +31,10 @@
 
 .text-france {
     font-family: "Ligue1";
+}
+
+.text-europe {
+    font-family:"ChampionsLeague";
 }
 
 

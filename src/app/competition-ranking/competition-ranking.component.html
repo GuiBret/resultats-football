@@ -1,3 +1,42 @@
-<p>
-  competition-ranking works!
-</p>
+<div class="container-fluid" *ngIf="this.ranking">
+    <h2 class="text-center">Classement</h2>
+    
+    <table id="standing" class="table-responsive">
+        <thead>
+            <th></th>
+            <th>Equipe</th>
+            <th>MJ</th>
+            <th>BP</th>
+            <th>BC</th>
+            <th>V</th>
+            <th>N</th>
+            <th>D</th>
+            <th>Pts</th>
+        
+        </thead>
+        <tbody *ngFor="let team of this.ranking.standing" >
+            <tr class="tr-{{team.seasonend}}">
+                <td class="text-{{team.seasonend}} text-center">{{team.position}}</td>
+                <td><img src="{{team.crestURI}}"  class="team-logo"/>{{team.teamName}}</td>
+                <td>{{team.playedGames}}</td>
+                <td>{{team.goals}}</td>
+                <td>{{team.goalsAgainst}}</td>
+                <td>{{team.wins}}</td>
+                <td>{{team.draws}}</td>
+                <td>{{team.losses}}</td>
+                <td>{{team.points}}</td>
+            
+            </tr>
+            
+            
+        
+        
+        
+        </tbody>
+    
+    
+    </table>
+    
+
+
+</div>

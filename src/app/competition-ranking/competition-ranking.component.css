@@ -1,0 +1,69 @@
+.team-logo {
+    width:1.5rem;
+    height:1.5rem;
+}
+
+table {
+    max-width:100%;
+}
+
+thead {
+    background-color:lightgray;
+}
+
+th {
+    padding-right:2rem;
+}
+
+th:last-child {
+    padding-right:.5rem;
+}
+
+td {
+    white-space:nowrap; /* Forces one-line display */
+}
+
+
+.text-champion {
+    color:white;
+    background-color:darkgreen;
+}
+
+.text-c1 {
+    color:white;
+    background-color:green;
+}
+
+.text-c3 {
+    color:white;
+    background-color:forestgreen;
+    
+}
+
+
+
+.text-relegation {
+    color:white;
+    background-color:red;
+}
+
+.tr-champion {
+    background-color:rgba(0,100,0,.8);
+    font-weight:bold;
+    color:white;
+}
+
+.tr-c1 {
+    background-color:rgba(0,128,0,.8);
+    color:white;
+}
+
+.tr-c3 {
+    background-color:rgba(34,139,34, .8);
+    color:white;
+}
+
+.tr-relegation {
+    background-color:rgba(255,0,0,.8);
+    color:white;
+}

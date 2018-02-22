@@ -17,11 +17,7 @@ export class CompetitionInfoComponent implements OnInit {
     competition: Object
   ngOnInit() {
       
-      console.log("Début");
-      
       this.route.params.subscribe((params : ParamMap) => {
-          
-            //this.competition_id = params["idcompetition"]
 
             this.http.get(`http://localhost/back-resultats/competition/${params["competitionid"]}`).subscribe((data) => {
           
