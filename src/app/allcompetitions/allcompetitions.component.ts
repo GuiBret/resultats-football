@@ -16,7 +16,7 @@ export class AllcompetitionsComponent implements OnInit {
     competitions: Object
   ngOnInit() {
       this.titleService.setTitle("Toutes les compétitions");
-      this.http.get("http://localhost/back-resultats/competitions/").subscribe((data) => {
+      this.http.get("http://127.0.0.1/back-resultats/competitions/").subscribe((data) => {
          this.competitions = data;
           
       });
