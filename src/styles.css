@@ -21,6 +21,12 @@
     font-family:"SerieA";
 }
 
+
+.btn {
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
 .text-italy {
     font-family:"SerieA";
 }
@@ -35,6 +41,56 @@
 
 .text-europe {
     font-family:"ChampionsLeague";
+}
+
+
+.btn-brazil {
+    background-color:yellow;
+    color:green;
+}
+
+.btn-england {
+    background-color:white;
+    color:red;
+
+}
+
+.btn-netherlands {
+    background-color:orange;
+    color:white;
+}
+
+.btn-spain {
+    background-color:#fdc200;
+    color: #c50b1e;
+}
+
+.btn-france {
+    background-color:blue;
+    color:white;
+
+    letter-spacing:1px;
+    
+}
+
+.btn-europe {
+    background-color:blue;
+    color:yellow;
+}
+.btn-australia {
+    background-color:darkblue;
+    color:white;
+}
+
+.btn-germany {
+    background-color:white;
+    color:black;
+}
+
+.btn-italy {
+    background-color:green;
+    color:white;
+
 }
 
 .center-positioning {

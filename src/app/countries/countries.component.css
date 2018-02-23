@@ -1,6 +1,7 @@
 .btn-country {
     margin-bottom: 2rem;
-    background-color:lightgray;
+    border-color:gray;
+    
 }
 
 .btn-country:hover {

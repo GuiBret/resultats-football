@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Title } from "@angular/platform-browser";
 
 
 @Component({
@@ -13,10 +14,16 @@ import { HttpClient } from '@angular/common/http';
 export class CountriesComponent implements OnInit {
   countries : Object;
     
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private titleService : Title) { }
 
+    
   ngOnInit() {
-      this.http.get("http://vps496160.ovh.net/back-resultats/countries/").subscribe(data => {
+      
+      this.titleService.setTitle("Compétitions par pays");
+      
+      this.http.get(`http://${ window.location.hostname}/back-resultats/countries/`).subscribe(data => {
+          
+          console.log(data);
           let country,
               elem;
 

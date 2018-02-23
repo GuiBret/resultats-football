@@ -13,18 +13,17 @@ export class CompetitionRankingComponent implements OnInit {
   constructor(private http: HttpClient, private route: ActivatedRoute, private titleService: Title) { }
     
     ranking: Object;
+    page_title: string;
 
   ngOnInit() {
       this.route.params.subscribe((params : ParamMap) => {
-          
-            //this.competition_id = params["idcompetition"]
-          
 
             this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/rankings`).subscribe((data) => {
-                console.log(data);
-                //console.log(data.leagueCaption);
-                //this.titleService.setTitle(`${data.leagueCaption} : Classement`);
+                
                 this.ranking = data;
+                this.page_title = this.ranking["leagueCaption"];
+                this.titleService.setTitle(`${this.page_title} : Classement`);
+                
             });
           
       });
