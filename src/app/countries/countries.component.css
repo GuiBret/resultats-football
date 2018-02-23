@@ -2,3 +2,8 @@
     background-color:darkgray;
     transition: background-color 200ms ease-in-out;
 }
+
+#container-countries {
+    max-height:80vh;
+    overflow-y:scroll;
+}
