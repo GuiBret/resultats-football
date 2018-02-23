@@ -37,6 +37,13 @@
     font-family:"ChampionsLeague";
 }
 
+.center-positioning {
+    position:absolute;
+    margin:0 auto;
+    display:block;
+    position:fixed;
+}
+
 
 @import "dependencies/bootstrap.min.css";
-    
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';

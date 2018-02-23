@@ -1,3 +1,5 @@
+
+<mat-progress-spinner class="center-positioning" color="blue" mode="indeterminate" *ngIf="!this.ranking"></mat-progress-spinner>
 <div class="container-fluid" *ngIf="this.ranking">
     <h2 class="text-center" id="page-title">Classement</h2>
     
@@ -11,7 +13,7 @@
             <th>V</th>
             <th>N</th>
             <th>D</th>
-            <th>Pts</th>
+            <th class="fixed-column">Pts</th>
         
         </thead>
         <tbody *ngFor="let team of this.ranking.standing" >

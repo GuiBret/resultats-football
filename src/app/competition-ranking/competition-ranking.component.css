@@ -82,3 +82,10 @@ td {
     background-color:rgba(255,0,0,.8);
     color:white;
 }
+
+/* Media query phone portrait */
+@media screen and (max-device-width:400px) { 
+    .container-fluid {
+        margin-bottom:2rem;
+    }
+}

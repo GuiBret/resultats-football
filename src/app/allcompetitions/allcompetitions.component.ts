@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Title } from "@angular/platform-browser";
+import { MatSpinner } from '@angular/material';
+
 
 @Component({
   selector: 'app-allcompetitions',

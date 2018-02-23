@@ -1,5 +1,7 @@
 <div class="container-fluid">
-    <div class="d-flex flex-column col-12 col-md-6 offset-md-3" id="container-competitions">
+    <mat-progress-spinner class="center-positioning" color="blue" mode="indeterminate" *ngIf="!this.competitions"></mat-progress-spinner>
+    <div class="d-flex flex-column col-12 col-md-6 offset-md-3" id="container-competitions" *ngIf="this.competitions">
+        
         <span *ngFor="let competition of this.competitions" routerLink="/competition/{{competition.id}}" class="btn btn-competition btn-{{competition.country_id}} text-{{competition.country_id}}">{{competition.caption}}</span>
     </div>
 
