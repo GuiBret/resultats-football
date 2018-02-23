@@ -25,6 +25,10 @@
 .btn {
     font-size:1.3rem;
     font-weight:bold;
+    margin-bottom: 2rem;
+    border-color:gray;
+    
+
 }
 
 .text-italy {

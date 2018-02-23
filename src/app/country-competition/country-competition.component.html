@@ -1,5 +1,11 @@
-
 <router-outlet></router-outlet>
-<p>
-  country-competition works!
-</p>
+<mat-progress-spinner class="center-positioning" mode="indeterminate" *ngIf="!this.results"></mat-progress-spinner>
+<div *ngIf="this.results">
+    <div class="container-fluid" *ngFor="let competition of this.results">
+        <div class="d-flex flex-column col-12 col-md-6 offset-md-3" >
+            <span class="btn" routerLink="../../competition/{{competition.id}}">{{competition.caption}}</span>
+        </div>
+
+    </div>
+
+</div>

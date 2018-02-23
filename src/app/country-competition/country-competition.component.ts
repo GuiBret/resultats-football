@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 
 
@@ -13,14 +14,20 @@ import { HttpClient } from "@angular/common/http";
 export class CountryCompetitionComponent implements OnInit {
     
     
-    results: Object[]
-  constructor(private http: HttpClient) { }
+    
+  constructor(private http: HttpClient, private route : ActivatedRoute) { }
 
-  ngOnInit() : void {
+    results: Object;
+    
+  ngOnInit() {
       
-      this.http.get(`http://${window.location.hostname}/back-resultats/countries/`).subscribe(data => {
-        
-      });
+      this.route.params.subscribe((params : ParamMap) => { 
+          
+          this.http.get(`http://${ window.location.hostname }/back-resultats/country-competitions/${params["countryid"]}`).subscribe((data) => {
+             
+             this.results = data;
+          });
+    });
   }
 
 }
