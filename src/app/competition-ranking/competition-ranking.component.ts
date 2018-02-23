@@ -19,7 +19,7 @@ export class CompetitionRankingComponent implements OnInit {
       this.route.params.subscribe((params : ParamMap) => {
 
             this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/rankings`).subscribe((data) => {
-                
+                console.log(data)
                 this.ranking = data;
                 this.page_title = this.ranking["leagueCaption"];
                 this.titleService.setTitle(`${this.page_title} : Classement`);
