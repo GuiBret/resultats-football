@@ -97,6 +97,11 @@
 
 }
 
+.btn-portugal {
+    background-color:darkred;
+    color:forestgreen;
+}
+
 .center-positioning {
     position:absolute;
     margin:0 auto;
