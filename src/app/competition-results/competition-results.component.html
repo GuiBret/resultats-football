@@ -1,3 +1,11 @@
-<p>
-  competition-results works!
-</p>
+<mat-progress-spinner class="center-positioning" color="blue" mode="indeterminate" *ngIf="!this.results"></mat-progress-spinner>
+
+<div class="container-fluid" *ngIf="results">
+    <div id="games">
+        <p *ngFor="let game of results.fixtures"><span class="homeTeam">{{game.homeTeamName}}</span> <span class="homeGoals">{{game.result.goalsHomeTeam}}</span> - <span class="awayGoals">{{game.result.goalsAwayTeam}}</span> <span class="awayTeam">{{game.awayTeamName}}</span></p>
+    
+    
+    </div>
+
+
+</div>

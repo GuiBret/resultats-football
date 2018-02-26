@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Title } from "@angular/platform-browser";
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-competition-results',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetitionResultsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private route: ActivatedRoute, private title: Title) { }
 
+  
+  results: Object;
   ngOnInit() {
+      
+      this.route.params.subscribe((params: ParamMap) => {
+
+          this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/results/${params["matchday"]}`).subscribe((data) => {
+              this.results = data;
+          });  
+      });
+      
+      
+      
   }
 
 }
