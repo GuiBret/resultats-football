@@ -16,8 +16,8 @@
             <th class="fixed-column">Pts</th>
         
         </thead>
-        <tbody *ngFor="let team of this.ranking.standing" >
-            <tr class="tr-{{team.seasonend}}">
+        <tbody  >
+            <tr class="tr-{{team.seasonend}}" *ngFor="let team of this.ranking.standing">
                 <td class="text-{{team.seasonend}} text-center">{{team.position}}</td>
                 <td><img src="{{team.crestURI}}"  class="team-logo"/>{{team.teamName}}</td>
                 <td>{{team.playedGames}}</td>
