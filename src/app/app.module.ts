@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -49,7 +52,11 @@ const appRoutes : Routes = [
         appRoutes, 
         { enableTracing: true}
     ),
-      MatProgressSpinnerModule
+      MatProgressSpinnerModule,
+      MatSelectModule,
+      BrowserAnimationsModule,
+      MatFormFieldModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
