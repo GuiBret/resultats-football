@@ -12,8 +12,8 @@
     
     
     
-    <div id="games">
-        <p *ngFor="let game of results.fixtures"><span class="homeTeam">{{game.homeTeamName}}</span> <span class="homeGoals">{{game.result.goalsHomeTeam}}</span> - <span class="awayGoals">{{game.result.goalsAwayTeam}}</span> <span class="awayTeam">{{game.awayTeamName}}</span></p>
+    <div id="games" class="text-center">
+        <p *ngFor="let game of results.fixtures" class="fixture mx-auto"><span class="homeTeam">{{game.homeTeamName}}</span> <span class="score"><span class="homeGoals">{{game.result.goalsHomeTeam}}</span> - <span class="awayGoals">{{game.result.goalsAwayTeam}}</span></span> <span class="awayTeam">{{game.awayTeamName}}</span></p>
     
     
     </div>
