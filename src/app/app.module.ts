@@ -8,6 +8,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -18,6 +20,7 @@ import { CompetitionRankingComponent } from './competition-ranking/competition-r
 import { CompetitionResultsComponent } from './competition-results/competition-results.component';
 import { AllcompetitionsComponent } from './allcompetitions/allcompetitions.component';
 import { CountriesComponent } from './countries/countries.component';
+
 
 
 
@@ -59,7 +62,9 @@ const appRoutes : Routes = [
       BrowserAnimationsModule,
       MatFormFieldModule,
       FormsModule,
-      MatButtonModule
+      MatButtonModule,
+      MatToolbarModule,
+      MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
