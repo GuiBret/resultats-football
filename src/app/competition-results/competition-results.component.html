@@ -1,14 +1,17 @@
 <mat-progress-spinner class="center-positioning" color="blue" mode="indeterminate" *ngIf="!this.results"></mat-progress-spinner>
 
 <div class="container-fluid col-12 col-md-6" *ngIf="results">
-    <mat-form-field>
-    <mat-select placeholder="Journées" [(ngModel)]="this.cur_matchday" (change)="getGamesFromMatchday($event.value)">
-        <mat-option *ngFor="let matchday of this.matchdaysArray" [value]="matchday" >{{matchday}}</mat-option>
-    </mat-select>
-        
+    <div class="text-center" id="additional_features">
+        <mat-form-field>
+            <mat-select placeholder="Journées" [(ngModel)]="this.cur_matchday" (change)="getGamesFromMatchday($event.value)">
+                <mat-option *ngFor="let matchday of this.matchdaysArray" [value]="matchday" >{{matchday}}</mat-option>
+            </mat-select>
         </mat-form-field>
+        <button mat-raised-button routerLink="../../ranking/{{cur_matchday}}">Voir le classement à cette journée</button>
+    </div>
     
-    <button mat-raised-button routerLink="../../ranking/{{cur_matchday}}">Voir le classement à cette journée</button>
+    
+    
     <div id="games">
         <p *ngFor="let game of results.fixtures"><span class="homeTeam">{{game.homeTeamName}}</span> <span class="homeGoals">{{game.result.goalsHomeTeam}}</span> - <span class="awayGoals">{{game.result.goalsAwayTeam}}</span> <span class="awayTeam">{{game.awayTeamName}}</span></p>
     
