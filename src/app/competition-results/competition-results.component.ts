@@ -18,6 +18,8 @@ export class CompetitionResultsComponent implements OnInit {
   cur_matchday: Number;
   ngOnInit() {
       
+      this.cur_matchday = parseInt(sessionStorage.getItem("currentMatchday"));
+      
       this.route.params.subscribe((params: ParamMap) => {
 
           this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/results/${params["matchday"]}`).subscribe(this.getCompetitionResults.bind(this));  
@@ -27,7 +29,7 @@ export class CompetitionResultsComponent implements OnInit {
     
   getCompetitionResults(data) : void {
       this.matchdaysArray = Array.from(Array(parseInt(sessionStorage.getItem("totalMatchdays"))).keys()).map((x) => x+1); // We create an array indexing all matchdays from the first to the last one
-      this.cur_matchday = parseInt(sessionStorage.getItem("currentMatchday"));
+      
       this.results = data;
   }
     

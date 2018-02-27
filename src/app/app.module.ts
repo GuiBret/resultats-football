@@ -26,6 +26,7 @@ const appRoutes : Routes = [
     { path: "competitions/:countryid", component: CountryCompetitionComponent},
     { path : "competition/:competitionid", component: CompetitionInfoComponent},
     { path: "competition/:competitionid/ranking", component: CompetitionRankingComponent},
+    { path: "competition/:competitionid/ranking/:matchday", component: CompetitionRankingComponent },
     { path: "competition/:competitionid/results/:matchday", component: CompetitionResultsComponent }
 ];
 

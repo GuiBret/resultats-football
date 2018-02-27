@@ -18,7 +18,7 @@ export class CompetitionRankingComponent implements OnInit {
   ngOnInit() {
       this.route.params.subscribe((params : ParamMap) => {
 
-            this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/rankings`).subscribe((data) => {
+            this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/rankings${params["matchday"] ? `/${params["matchday"]}` : ""}`).subscribe((data) => {
                 console.log(data)
                 this.ranking = data;
                 this.page_title = this.ranking["leagueCaption"];
