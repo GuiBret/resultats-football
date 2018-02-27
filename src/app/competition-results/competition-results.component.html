@@ -2,8 +2,8 @@
 
 <div class="container-fluid" *ngIf="results">
     <mat-form-field>
-    <mat-select placeholder="Journées" [(ngModel)]="this.cur_matchday">
-        <mat-option *ngFor="let val of this.matchdaysArray" [value]="val">{{val}}</mat-option>
+    <mat-select placeholder="Journées" [(ngModel)]="this.cur_matchday" (change)="getGamesFromMatchday($event.value)">
+        <mat-option *ngFor="let matchday of this.matchdaysArray" [value]="matchday" >{{matchday}}</mat-option>
     </mat-select>
         </mat-form-field>
     <div id="games">

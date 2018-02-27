@@ -30,5 +30,15 @@ export class CompetitionResultsComponent implements OnInit {
       this.cur_matchday = parseInt(sessionStorage.getItem("currentMatchday"));
       this.results = data;
   }
+    
+    getGamesFromMatchday(matchday) {
+        
+        this.results = null; // We erase the content of this.results so that the spinner appears while data is loaded
+        this.route.params.subscribe((params: ParamMap) => {
+            this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/results/${matchday}`).subscribe(this.getCompetitionResults.bind(this));      
+        })
+        
+        
+    }
 
 }
