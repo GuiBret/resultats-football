@@ -9,7 +9,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -21,8 +21,6 @@ import { CompetitionResultsComponent } from './competition-results/competition-r
 import { AllcompetitionsComponent } from './allcompetitions/allcompetitions.component';
 import { CountriesComponent } from './countries/countries.component';
 import { CompetitionTeamsComponent } from './competition-teams/competition-teams.component';
-
-
 
 
 const appRoutes : Routes = [
@@ -49,14 +47,14 @@ const appRoutes : Routes = [
     AllcompetitionsComponent,
     CountriesComponent,
     CompetitionTeamsComponent,
-    
+
   ],
   imports: [
       BrowserModule,
       HttpClientModule,
       NgbModule.forRoot(),
       RouterModule.forRoot(
-        appRoutes, 
+        appRoutes,
         { enableTracing: true}
     ),
       MatProgressSpinnerModule,
@@ -66,7 +64,7 @@ const appRoutes : Routes = [
       FormsModule,
       MatButtonModule,
       MatToolbarModule,
-      MatIconModule
+      MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
