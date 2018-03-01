@@ -1,3 +1,22 @@
-nav {
-    margin-bottom:2rem;
+
+.side-content {
+  background-color:green;
+  height:100%;
+}
+
+.container {
+  height:100%;
+}
+
+
+a {
+  color:white;
+}
+
+#img_sidenav {
+  vertical-align:middle;
+}
+
+#btn_sidenav {
+  border:none;
 }
