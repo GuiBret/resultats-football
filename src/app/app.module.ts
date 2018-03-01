@@ -20,6 +20,7 @@ import { CompetitionRankingComponent } from './competition-ranking/competition-r
 import { CompetitionResultsComponent } from './competition-results/competition-results.component';
 import { AllcompetitionsComponent } from './allcompetitions/allcompetitions.component';
 import { CountriesComponent } from './countries/countries.component';
+import { CompetitionTeamsComponent } from './competition-teams/competition-teams.component';
 
 
 
@@ -47,6 +48,7 @@ const appRoutes : Routes = [
     CompetitionResultsComponent,
     AllcompetitionsComponent,
     CountriesComponent,
+    CompetitionTeamsComponent,
     
   ],
   imports: [
