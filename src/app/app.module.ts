@@ -9,7 +9,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -22,7 +24,6 @@ import { AllcompetitionsComponent } from './allcompetitions/allcompetitions.comp
 import { CountriesComponent } from './countries/countries.component';
 import { CompetitionTeamsComponent } from './competition-teams/competition-teams.component';
 
-
 const appRoutes : Routes = [
     { path: "competitions", component: AllcompetitionsComponent},
     { path: "countries", component: CountriesComponent},
@@ -32,8 +33,6 @@ const appRoutes : Routes = [
     { path: "competition/:competitionid/ranking/:matchday", component: CompetitionRankingComponent },
     { path: "competition/:competitionid/results/:matchday", component: CompetitionResultsComponent }
 ];
-
-
 
 
 @NgModule({
@@ -64,7 +63,9 @@ const appRoutes : Routes = [
       FormsModule,
       MatButtonModule,
       MatToolbarModule,
-      MatSidenavModule
+      MatIconModule,
+      MatSidenavModule,
+      MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
