@@ -10,6 +10,7 @@
 .homeTeam, .score, .awayTeam {
     display:table-cell;
     width:33%;
+    white-space: nowrap;
 }
 
 .winner {
