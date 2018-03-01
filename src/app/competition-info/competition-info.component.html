@@ -1,4 +1,6 @@
-<mat-progress-spinner class="center-positioning" color="blue" mode="indeterminate" *ngIf="!this.competition"></mat-progress-spinner>
+<div class="spinner-container">
+  <mat-progress-spinner class="center-positioning" color="blue" mode="indeterminate" *ngIf="!this.competition"></mat-progress-spinner>
+</div>
 <div class='container-fluid' *ngIf="competition">
     <h2 class="text-center text-{{competition.country_id}}">{{competition.caption}}</h2>
     <form class="d-flex flex-column mx-auto text-center" id="form-competition-info">
@@ -7,11 +9,11 @@
         </div>
         <div class="form-group">
             <button type='button' class="btn btn-{{competition.country_id}} text-{{competition.country_id}}" id="btn-results" routerLink="results/{{competition.currentMatchday}}">Resultats</button>
-        
+
         </div>
         <div class="form-group">
             <button type='button' class="btn btn-{{competition.country_id}} text-{{competition.country_id}}" id="btn-teams" disabled>equipes</button>
         </div>
     </form>
-    
+
 </div>
