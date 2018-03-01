@@ -11,10 +11,10 @@
 </mat-toolbar>
 
 <mat-sidenav-container class="side-container">
-    <mat-sidenav #sideNav mode="side" [(opened)]="opened" class="side-content">
-      <p><a routerLink="/">Accueil</a></p>
-      <p><a routerLink="/competitions" class="link">Toutes les compétitions</a></p>
-      <p><a routerLink="/countries">Compétitions par pays</a></p>
+    <mat-sidenav #sideNav mode="{{ mobileQuery.matches ? 'over' : 'side' }}" [(opened)]="opened" [fixedInViewport]="mobileQuery.matches" class="side-content">
+      <a mat-list-item routerLink="/">Accueil</a>
+      <a mat-list-item routerLink="/competitions" class="link">Toutes les compétitions</a>
+      <a mat-list-item routerLink="/countries">Compétitions par pays</a>
     </mat-sidenav>
 
     <mat-sidenav-content>

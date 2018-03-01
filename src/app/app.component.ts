@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,14 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
+  mobileQuery : MediaQueryList;
+
   title = 'Résultats Football';
+
+  constructor(media: MediaMatcher) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery.addListener(this._mobileQueryListener);
+  }
+
+
 }
