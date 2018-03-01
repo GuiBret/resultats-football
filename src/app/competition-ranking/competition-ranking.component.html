@@ -2,7 +2,7 @@
 <mat-progress-spinner class="center-positioning" mode="indeterminate" *ngIf="!this.ranking"></mat-progress-spinner>
 <div class="container-fluid" *ngIf="this.ranking">
     <h2 class="text-center" id="page-title">Classement</h2>
-    
+
     <table id="standing" class="table table-responsive">
         <thead>
             <th></th>
@@ -14,7 +14,7 @@
             <th>N</th>
             <th>D</th>
             <th class="fixed-column">Pts</th>
-        
+
         </thead>
         <tbody  >
             <tr class="tr-{{team.seasonend}}" *ngFor="let team of this.ranking.standing">
@@ -27,18 +27,18 @@
                 <td>{{team.draws}}</td>
                 <td>{{team.losses}}</td>
                 <td>{{team.points}}</td>
-            
+
             </tr>
-            
-            
-        
-        
-        
+
+
+
+
+
         </tbody>
-    
-    
+
+
     </table>
-    
+
 
 
 </div>
