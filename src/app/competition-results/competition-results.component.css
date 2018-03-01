@@ -12,15 +12,19 @@
     width:33%;
 }
 
-@media only screen 
+.winner {
+  font-weight:bold;
+}
+
+@media only screen
  and (min-device-width:320px)
  and (max-device-width:480px)
  and (orientation: portrait) {
-           
+
      .fixture {
          width:100%;
      }
-     
+
      .container-fluid {
          font-size:.9rem;
      }
