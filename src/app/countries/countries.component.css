@@ -1,4 +1,4 @@
 #container-countries {
     max-height:80vh;
-    overflow-y:scroll;
+    overflow-y:auto;
 }

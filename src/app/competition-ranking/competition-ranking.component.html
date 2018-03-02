@@ -15,10 +15,9 @@
             <th>V</th>
             <th>N</th>
             <th>D</th>
-            <th class="fixed-column">Pts</th>
-
+            <th class="fixed-column affix">Pts</th>
         </thead>
-        <tbody  >
+        <tbody>
             <tr class="tr-{{team.seasonend}}" *ngFor="let team of this.ranking.standing">
                 <td class="text-{{team.seasonend}} text-center">{{team.position}}</td>
                 <td><img src="{{team.crestURI}}"  class="team-logo"/>{{team.teamName}}</td>
@@ -29,14 +28,7 @@
                 <td>{{team.draws}}</td>
                 <td>{{team.losses}}</td>
                 <td>{{team.points}}</td>
-
             </tr>
-
         </tbody>
-
-
     </table>
-
-
-
 </div>
