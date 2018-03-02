@@ -2,19 +2,21 @@
 <div class="main-container">
 
   <mat-toolbar color="accent" class="example-toolbar">
-  <button mat-icon-button (click)="sideNav.toggle()" id="btn_sidenav">
-    <mat-icon id="img_sidenav">menu</mat-icon>
+  <button mat-icon-button (click)="sideNav.toggle();this.menuOpened = !this.menuOpened" id="btn_sidenav">
+    <mat-icon id="img_sidenav" *ngIf="!menuOpened">menu</mat-icon><mat-icon id="img_sidenav" *ngIf="menuOpened">arrow_back</mat-icon>
   </button>
-  <h1 class="text-center">
+  <h1 class="text-center toolbar-title">
       {{title}}
   </h1>
 </mat-toolbar>
 
 <mat-sidenav-container class="side-container">
     <mat-sidenav #sideNav mode="{{ mobileQuery.matches ? 'over' : 'side' }}" [(opened)]="opened" [fixedInViewport]="mobileQuery.matches" class="side-content">
-      <a mat-list-item routerLink="/">Accueil</a>
-      <a mat-list-item routerLink="/competitions" class="link">Toutes les compétitions</a>
-      <a mat-list-item routerLink="/countries">Compétitions par pays</a>
+      <mat-nav-list>
+        <mat-list-item routerLink="/">Accueil</mat-list-item>
+        <a mat-list-item routerLink="/competitions" class="link">Toutes les compétitions</a>
+        <a mat-list-item routerLink="/countries">Compétitions par pays</a>
+      </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
