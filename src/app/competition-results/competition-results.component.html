@@ -12,13 +12,7 @@
         <button mat-raised-button routerLink="../../ranking/{{cur_matchday}}">Voir le classement à cette journée</button>
     </div>
 
-
-
     <div id="games" class="text-center">
         <p *ngFor="let game of results.fixtures" class="fixture mx-auto"><span class="homeTeam{{game.final_res === 'homeWin' ? ' winner' : ''}}">{{game.homeTeamName}}</span> <span class="score"><span class="homeGoals">{{game.result.goalsHomeTeam}}</span> - <span class="awayGoals">{{game.result.goalsAwayTeam}}</span></span> <span class="awayTeam{{game.final_res === 'awayWin' ? ' winner' : ''}}">{{game.awayTeamName}}</span></p>
-
-
     </div>
-
-
 </div>

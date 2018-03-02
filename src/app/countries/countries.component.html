@@ -2,5 +2,4 @@
     <div class="d-flex flex-column col-12 col-md-6 offset-md-3" id="container-countries">
         <span *ngFor="let country of this.countries" routerLink="/competitions/{{country.id}}" class="btn btn-country btn-{{country.country_text}} text-{{country.country_text}}">{{country.name}}</span>
     </div>
-    
 </div>

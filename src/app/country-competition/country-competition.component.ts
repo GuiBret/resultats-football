@@ -12,22 +12,21 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 
 
 export class CountryCompetitionComponent implements OnInit {
-    
-    
-    
-  constructor(private http: HttpClient, private route : ActivatedRoute) { }
+
+    constructor(private http: HttpClient, private route : ActivatedRoute) { }
+
 
     results: Object;
-    
-  ngOnInit() {
-      
-      this.route.params.subscribe((params : ParamMap) => { 
-          
-          this.http.get(`http://${ window.location.hostname }/back-resultats/country-competitions/${params["countryid"]}`).subscribe((data) => {
-              console.log(data);
-             this.results = data;
-          });
-    });
-  }
+
+    ngOnInit() {
+
+        this.route.params.subscribe((params : ParamMap) => {
+
+            this.http.get(`http://${ window.location.hostname }/back-resultats/country-competitions/${params["countryid"]}`).subscribe((data) => {
+                console.log(data);
+                this.results = data;
+            });
+        });
+    }
 
 }
