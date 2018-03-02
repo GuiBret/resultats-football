@@ -17,7 +17,6 @@ export class AppComponent {
 
   constructor(media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
 
