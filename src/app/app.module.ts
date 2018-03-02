@@ -24,8 +24,10 @@ import { CompetitionResultsComponent } from './competition-results/competition-r
 import { AllcompetitionsComponent } from './allcompetitions/allcompetitions.component';
 import { CountriesComponent } from './countries/countries.component';
 import { CompetitionTeamsComponent } from './competition-teams/competition-teams.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes : Routes = [
+    { path: "", component: HomeComponent},
     { path: "competitions", component: AllcompetitionsComponent},
     { path: "countries", component: CountriesComponent},
     { path: "competitions/:countryid", component: CountryCompetitionComponent},
@@ -47,6 +49,7 @@ const appRoutes : Routes = [
     AllcompetitionsComponent,
     CountriesComponent,
     CompetitionTeamsComponent,
+    HomeComponent,
 
   ],
   imports: [
