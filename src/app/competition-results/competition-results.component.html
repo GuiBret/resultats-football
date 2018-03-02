@@ -1,8 +1,8 @@
-<div class='spinner-container'>
-  <mat-progress-spinner class="center-positioning" color="blue" mode="indeterminate" *ngIf="!this.results"></mat-progress-spinner>
+<div class='spinner-container' *ngIf="!this.results">
+  <mat-progress-spinner class="center-positioning" color="blue" mode="indeterminate" ></mat-progress-spinner>
 </div>
 
-<div class="container-fluid col-12 col-md-6" *ngIf="results">
+<div class="container-fluid col-12 col-md-8" *ngIf="results">
     <div class="text-center" id="additional_features">
         <mat-form-field>
             <mat-select placeholder="Journées" [(ngModel)]="this.cur_matchday" (change)="getGamesFromMatchday($event.value)">

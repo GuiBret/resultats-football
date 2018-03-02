@@ -8,6 +8,10 @@
   height:100%;
 }
 
+.toolbar-title {
+  margin-left:2rem;
+}
+
 
 a {
   color:white;

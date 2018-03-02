@@ -19,5 +19,4 @@ export class AppComponent {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
   }
 
-
 }
