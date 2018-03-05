@@ -21,7 +21,7 @@ export class CompetitionInfoComponent implements OnInit {
       this.route.params.subscribe((params : ParamMap) => {
 
             this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}`).subscribe((data) => {
-                this.titleService.setTitle(data.caption);
+                this.titleService.setTitle(data["caption"]);
                 sessionStorage.setItem("totalMatchdays", data["numberOfMatchdays"]);
                 sessionStorage.setItem("currentMatchday", data["currentMatchday"]);
                 this.competition = data;
