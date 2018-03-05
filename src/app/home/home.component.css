@@ -1,0 +1,21 @@
+#home-title {
+    margin-bottom:2rem;
+}
+
+.btn-home {
+    width:40%;
+}
+
+#btn-container {
+    margin-top:2rem;
+}
+
+@media only screen
+ and (min-device-width:320px)
+ and (max-device-width:480px)
+ and (orientation: portrait) {
+
+     .btn-home {
+         width:100%;
+     }
+}

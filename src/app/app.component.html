@@ -1,7 +1,7 @@
 
 <div class="main-container">
 
-  <mat-toolbar color="accent" class="example-toolbar">
+  <mat-toolbar color="accent" class="app-toolbar">
   <button mat-icon-button (click)="sideNav.toggle();this.menuOpened = !this.menuOpened" id="btn_sidenav">
     <mat-icon id="img_sidenav" *ngIf="!menuOpened">menu</mat-icon><mat-icon id="img_sidenav" *ngIf="menuOpened">arrow_back</mat-icon>
   </button>
@@ -10,7 +10,7 @@
   </h1>
 </mat-toolbar>
 
-<mat-sidenav-container class="side-container">
+<mat-sidenav-container class="side-container" [class.is-mobile]="mobileQuery.matches">
     <mat-sidenav #sideNav mode="{{ mobileQuery.matches ? 'over' : 'side' }}" [(opened)]="opened" [fixedInViewport]="mobileQuery.matches" class="side-content">
       <mat-nav-list>
         <mat-list-item routerLink="/">Accueil</mat-list-item>
