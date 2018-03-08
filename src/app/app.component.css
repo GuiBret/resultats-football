@@ -12,6 +12,13 @@
   margin-left:2rem;
 }
 
+.mat-list-item {
+    margin-bottom:2rem;
+}
+
+mat-sidenav {
+    top:56px; /* TODO : find a better solution */
+}
 
 a {
   color:white;

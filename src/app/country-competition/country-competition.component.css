@@ -1,10 +1,29 @@
 .btn-country {
     margin-bottom: 2rem;
     border-color:gray;
-    
+
 }
 
 .btn-country:hover {
     background-color:darkgray;
     transition: background-color 200ms ease-in-out;
+}
+
+#container-competitions {
+    margin-top:10%;
+}
+
+@media only screen
+ and (min-device-width:320px)
+ and (max-device-width:480px)
+ and (orientation: portrait) {
+
+     #container-competitions {
+         margin-top:20%;
+     }
+
+     .btn {
+         font-size:1rem;
+     }
+
 }
