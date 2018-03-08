@@ -12,6 +12,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 export class AppComponent {
 
   mobileQuery : MediaQueryList;
+  menuOpened: boolean
 
   title = 'Résultats Football';
 

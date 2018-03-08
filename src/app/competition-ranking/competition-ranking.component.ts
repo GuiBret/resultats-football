@@ -11,23 +11,23 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class CompetitionRankingComponent implements OnInit {
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private titleService: Title) { }
-    
+
     ranking: Object;
     page_title: string;
+    matchdaysArray : Array<Number>;
 
   ngOnInit() {
       this.route.params.subscribe((params : ParamMap) => {
 
-            this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/rankings${params["matchday"] ? `/${params["matchday"]}` : ""}`).subscribe((data) => {
-                console.log(data)
-                this.ranking = data;
-                this.page_title = this.ranking["leagueCaption"];
-                this.titleService.setTitle(`${this.page_title} : Classement`);
-                
-            });
-          
+            this.http.get(`http://${window.location.hostname}/back-resultats/competition/${params["competitionid"]}/rankings${params["matchday"] ? `/${params["matchday"]}` : ""}`).subscribe(this.getCompetitionRanking.bind(this));
+
       });
-      
   }
 
+  getCompetitionRanking(data) {
+      this.ranking = data;
+      this.page_title = this.ranking["leagueCaption"];
+      this.titleService.setTitle(`${this.page_title} : Classement`);
+
+  }
 }
