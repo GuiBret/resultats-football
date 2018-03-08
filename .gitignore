@@ -3,3 +3,4 @@ node_modules/**
 e2e/**
 dist/**
 npm-debug.log
+.htaccess

@@ -25,6 +25,7 @@ import { AllcompetitionsComponent } from './allcompetitions/allcompetitions.comp
 import { CountriesComponent } from './countries/countries.component';
 import { CompetitionTeamsComponent } from './competition-teams/competition-teams.component';
 import { HomeComponent } from './home/home.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 const appRoutes : Routes = [
     { path: "", component: HomeComponent},
@@ -34,7 +35,8 @@ const appRoutes : Routes = [
     { path : "competition/:competitionid", component: CompetitionInfoComponent},
     { path: "competition/:competitionid/ranking", component: CompetitionRankingComponent},
     { path: "competition/:competitionid/ranking/:matchday", component: CompetitionRankingComponent },
-    { path: "competition/:competitionid/results/:matchday", component: CompetitionResultsComponent }
+    { path: "competition/:competitionid/results/:matchday", component: CompetitionResultsComponent },
+    { path: '**', redirectTo: "" }
 ];
 
 
@@ -72,7 +74,7 @@ const appRoutes : Routes = [
       MatListModule,
       LayoutModule
   ],
-  providers: [],
+  providers: [provide: LocationStrategy, useClass: HashLocationStrategy],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
