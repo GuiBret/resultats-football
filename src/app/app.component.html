@@ -12,7 +12,7 @@
 
 <mat-sidenav-container class="side-container" [class.is-mobile]="mobileQuery.matches">
     <mat-sidenav #sideNav mode="{{ mobileQuery.matches ? 'over' : 'side' }}" [fixedInViewport]="mobileQuery.matches" class="side-content">
-      <mat-nav-list>
+      <mat-nav-list id="nav-list" [style.margin-top]="mobileQuery.matches ? '56px' : 0">
         <mat-list-item routerLink="/">Accueil</mat-list-item>
         <a mat-list-item routerLink="/competitions" class="link">Toutes les compétitions</a>
         <a mat-list-item routerLink="/countries">Compétitions par pays</a>

@@ -36,7 +36,6 @@ html, body {
   margin-left:-50px; /* The spinner has dimensions of 100 * 100px, then we crop half of it so that it is perfecly centered */
 }
 
-
 .btn {
     font-size:1.3rem;
     font-weight:bold;
