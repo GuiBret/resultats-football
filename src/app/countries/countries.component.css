@@ -1,4 +1,15 @@
 #container-countries {
     max-height:80vh;
     overflow-y:auto;
+
+}
+
+
+@media screen and (max-device-width:641px) {
+    .btn {
+        font-size:.95rem;
+    }
+    #container-countries {
+        margin-top:2rem;
+    }
 }
